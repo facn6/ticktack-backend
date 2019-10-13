@@ -1,0 +1,26 @@
+{
+  "name": "ticktack-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn6/ticktack-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn6/ticktack-backend/issues"
+  },
+  "homepage": "https://github.com/facn6/ticktack-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
