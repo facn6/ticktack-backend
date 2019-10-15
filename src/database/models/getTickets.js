@@ -1,6 +1,6 @@
 const dbConnection = require('../databaseConnection');
 
-const getTickets = () =>{
+const getTickets = () => {
 
 return new Promise((resolve, reject) =>
 
