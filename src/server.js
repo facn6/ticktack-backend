@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 app.get('/artists', (req, res, next) => {
   getData.getArtists()
     .then((data) => {
-      console.log('ff', data);
+      res.status(200).json(data)
     }).catch((err) => next(err));
 });
 
