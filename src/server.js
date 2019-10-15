@@ -6,12 +6,23 @@ const app = express();
 const getData = require("./database/models/GetData");
 
 
-var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "../build")));
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
+app.get("/artists",(req,res,next)=>{
+  getData.getArtists()
+  .then(data=>{
+    console.log('ff',data);
+  }).catch(err=>
+  next(err));
+});
 
 const PORT = process.env.PORT || 5000;
 

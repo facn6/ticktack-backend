@@ -34,10 +34,10 @@ VALUES
 ("Rihana","Jomana in arabic","Hip-hop"),
 ("Bon Iver","Justin Vernon and his band","Indie-Rock")
 
-INSERT INTO tickets (artist,artist_id,location,date,time,genre,description,type,price,quantity,views) 
+INSERT INTO tickets (artist,artist_id,location,date,time,genre,description,type,price,quantity,views)
 VALUES
 
-("Rihana",1,"Israel","5/11/2019","16:00 - 22:00","Hip-hop","It's a good event, you know?","VIP",300,400,315),
+("Rihanna",1,"Israel","5/11/2019","16:00 - 22:00","Hip-hop","It's a good event, you know?","VIP",300,400,315),
 ("Bon Iver",2,"Israel","6/11/2019","17:00 - 00:00","Indie-Rock","It's a good event, you know?","Regular",200,400,400)
 
 
