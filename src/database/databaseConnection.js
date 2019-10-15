@@ -1,6 +1,9 @@
-const { Pool } = require('pg');
-const url = require('url');
 require('env2')('./config.env');
+
+const { Pool } = require('pg');
+
+const url = require('url');
+
 
 if (!process.env.DATABASE_URL) throw new Error('Enviroment variable DB_URL must be set');
 
@@ -14,7 +17,7 @@ const options = {
   max: process.env.DB_MAX_CONNECTIONS || 2,
   user: username,
   password,
-  ssl: params.hostname !== 'localhost'
+  ssl: params.hostname !== 'localhost',
 };
 
 module.exports = new Pool(options);

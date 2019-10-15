@@ -1,27 +1,29 @@
-const path = require("path");
-const express = require("express");
-require("env2")("config.env");
+const path = require('path');
+
+const express = require('express');
+
+require('env2')('config.env');
+
+const bodyParser = require('body-parser');
+
+const getData = require('./database/models/getArtists');
 
 const app = express();
-const getData = require("./database/models/GetData");
 
-
-const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, "../build")));
-app.get("/", (req, res) => {
-  res.send("hello");
+app.use(express.static(path.join(__dirname, '../build')));
+app.get('/', (req, res) => {
+  res.send('hello');
 });
 
-app.get("/artists",(req,res,next)=>{
+app.get('/artists', (req, res, next) => {
   getData.getArtists()
-  .then(data=>{
-    console.log('ff',data);
-  }).catch(err=>
-  next(err));
+    .then((data) => {
+      console.log('ff', data);
+    }).catch((err) => next(err));
 });
 
 const PORT = process.env.PORT || 5000;
