@@ -26,6 +26,7 @@ app.get('/artists', (req, res, next) => {
     }).catch((err) => next(err));
 });
 
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server start on port ${PORT}`));
