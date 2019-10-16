@@ -6,7 +6,9 @@ require('env2')('config.env');
 
 const bodyParser = require('body-parser');
 
-const getData = require('./database/models/getArtists');
+const getArtists = require('./database/models/getArtists');
+
+const getTickets = require('./database/models/getTickets');
 
 const app = express();
 
@@ -20,11 +22,20 @@ app.get('/', (req, res) => {
 });
 
 app.get('/artists', (req, res, next) => {
-  getData.getArtists()
+  getArtists.getArtists()
     .then((data) => {
       res.status(200).json(data)
     }).catch((err) => next(err));
 });
+
+app.post('/gettickets', ({body}, res, next) => {
+  getTickets.getTicketsByGenre()
+    .then((tickets) => {
+      res.status(200).json(tickets)
+    }).catch((err) => next(err));
+});
+
+
 
 const PORT = process.env.PORT || 5000;
 
