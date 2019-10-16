@@ -29,7 +29,7 @@ app.get('/artists', (req, res, next) => {
 });
 
 app.post('/gettickets', ({body}, res, next) => {
-  getTickets.getTicketsByGenre()
+  getTickets.getTicketsByGenre(body)
     .then((tickets) => {
       res.status(200).json(tickets)
     }).catch((err) => next(err));
