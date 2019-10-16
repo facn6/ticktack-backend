@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "start": "node src/server.js",
+    "dbbuild": "node src/database/databaseBuild.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,15 @@
   },
   "homepage": "https://github.com/facn6/ticktack-backend#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "env2": "^2.2.2",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
