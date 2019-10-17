@@ -10,4 +10,16 @@ router
   .route('/getticketsbygenre')
   .post(ticketController.getTicketsByGenre)
 
+  router
+  .route('/tickets')
+  .get(ticketController.getTickets)
+
+
+  router
+  .route('/toptickets')
+  .get(ticketController.gettopTickets)
+
+
+
+
   module.exports = router;

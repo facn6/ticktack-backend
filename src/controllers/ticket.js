@@ -6,3 +6,15 @@ module.exports.getTicketsByGenre = ({ body }, res, next) => {
       res.status(200).json(tickets);
     }).catch((err) => next(err));
 };
+
+module.exports.getTickets = (req, res, next) => {
+  Tickets.getTickets()
+    .then((data) => res.status(200).json(data))
+    .catch((err) => next(err));
+};
+
+module.exports.gettopTickets = (req, res, next) => {
+  Tickets.mostViewedTickets()
+    .then((data) => res.status(200).json(data))
+    .catch((err) => next(err));
+};
