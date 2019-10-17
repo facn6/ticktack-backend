@@ -9,7 +9,8 @@ CREATE TABLE artists
     artist_id SERIAL PRIMARY KEY,
     artist_name VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
-    genre VARCHAR(50) NOT NULL
+    genre VARCHAR(50) NOT NULL,
+    views INTEGER NOT NULL
 );
 
 CREATE TABLE tickets
@@ -28,9 +29,9 @@ CREATE TABLE tickets
     views INTEGER NOT NULL
 );
 
-INSERT INTO artists (artist_name , description , genre) VALUES
-('Rihanna','Jomana in arabic','Hip-hop'),
-('Bon Iver','Justin Vernon and his band','Indie-Rock');
+INSERT INTO artists (artist_name , description , genre, views) VALUES
+('Rihanna','Jomana in arabic','Hip-hop',300),
+('Bon Iver','Justin Vernon and his band','Indie-Rock',400);
 
 INSERT INTO tickets (artist,artist_id,location,date,time,genre,description,type,price,quantity,views) VALUES
 ('Rihanna',1,'Israel','5/11/2019','16:00 - 22:00','Hip-hop','It is a good event, you know?','VIP',300,400,315),

@@ -19,6 +19,9 @@ router
   .route('/toptickets')
   .get(ticketController.gettopTickets)
 
+  router
+  .route('/topartists')
+  .get(artistController.gettopArtists)
 
 
 
