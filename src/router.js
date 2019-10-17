@@ -4,8 +4,10 @@ const ticketController = require('./controllers/ticket.js');
 
 router
   .route('/artists')
-    .get(artistController.getArtist)
+  .get(artistController.getArtist)
+
+  router
   .route('/getticketsbygenre')
-    .post(ticketController.getTicketsByGenre)
+  .post(ticketController.getTicketsByGenre)
 
   module.exports = router;
