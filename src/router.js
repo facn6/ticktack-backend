@@ -16,12 +16,17 @@ router
 
 
   router
-  .route('/toptickets')
+  .route('/topticketsbyviews')
   .get(ticketController.gettopTickets)
 
   router
   .route('/topartists')
   .get(artistController.gettopArtists)
+
+  router
+  .route('/topticketsbydate')
+  .get(ticketController.getClosestTickets)
+
 
 
 

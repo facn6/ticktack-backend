@@ -16,7 +16,7 @@ const getArtists = () => new Promise(
 );
 
 const mostViewedArtists = () => new Promise(
-  (resolve, reject) => dbConnection.query('SELECT * FROM artists ORDER BY views DESC LIMIT 100', (err, res) => {
+  (resolve, reject) => dbConnection.query('SELECT * FROM artists ORDER BY views DESC LIMIT 5', (err, res) => {
     if (err) {
       reject(err);
     } else {

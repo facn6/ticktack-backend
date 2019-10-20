@@ -2,7 +2,8 @@ const path = require('path');
 const express = require('express');
 require('env2')('config.env');
 const bodyParser = require('body-parser');
-const router= require('./router');
+const router = require('./router');
+
 const app = express();
 
 app.use(bodyParser.urlencoded());

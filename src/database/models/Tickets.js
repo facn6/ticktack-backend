@@ -26,6 +26,15 @@ const mostViewedTickets = () => new Promise(
   }),
 );
 
+const closestTickets = () => new Promise(
+  (resolve, reject) => dbConnection.query('SELECT * FROM tickets ORDER BY date LIMIT 5', (err, res) => {
+    if (err) {
+      reject(err);
+    } else {
+      resolve(res.rows);
+    }
+  }),
+);
 module.exports = {
-  getTicketsByGenre, getTickets, mostViewedTickets
+  getTicketsByGenre, getTickets, mostViewedTickets,closestTickets
 };
