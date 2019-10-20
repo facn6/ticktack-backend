@@ -12,6 +12,7 @@ CREATE TABLE artists
     description TEXT NOT NULL,
     genre VARCHAR(50) NOT NULL,
     image_url VARCHAR NOT NULL
+
 );
 
 CREATE TABLE tickets
@@ -42,6 +43,7 @@ CREATE TABLE events
 INSERT INTO artists (artist_name , description , genre, image_url) VALUES
 ('Rihanna','Jomana in arabic','Hip-hop','https://imgur.com/kOtOyHA'),
 ('Bon Iver','Justin Vernon and his band','Indie-Rock','https://imgur.com/FdFkOBF');
+
 
 INSERT INTO tickets (artist,artist_id,location,date,time,genre,description,type,price,quantity,views,image_url) VALUES
 ('Rihanna',1,'Israel','5/11/2019','16:00 - 22:00','Hip-hop','It is a good event, you know?','VIP',300,400,315, 'https://imgur.com/9XRO11e'),
