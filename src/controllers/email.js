@@ -16,7 +16,7 @@ module.exports.sendContactEmail = ((req, res, next) => {
     // should be replaced with real recipient's account
     to: req.body.mail,
     subject: 'מבצעים חמים!!!',
-    html: '<h1>WOOOOOOOOHOOOOOOOOO</h1>',
+    html: '<h1>תודה על ההרשמה </h1>+ <p>נשלח אליך מבצעים חמים בהקדם</>',
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
