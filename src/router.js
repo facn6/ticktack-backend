@@ -2,30 +2,36 @@ const router = require('express').Router();
 const artistController = require('./controllers/artist.js');
 const ticketController = require('./controllers/ticket.js');
 const emailController = require('./controllers/email.js');
+const imagesController = require('./controllers/images.js');
+
 router
   .route('/artists')
-  .get(artistController.getArtist)
+  .get(artistController.getArtist);
 
 router
   .route('/getticketsbygenre')
-  .post(ticketController.getTicketsByGenre)
+  .post(ticketController.getTicketsByGenre);
+
+router
+  .route('/images')
+  .get(imagesController.getImages);
 
 router
   .route('/tickets')
-  .get(ticketController.getTickets)
+  .get(ticketController.getTickets);
 
 
 router
   .route('/topticketsbyviews')
-  .get(ticketController.gettopTickets)
+  .get(ticketController.gettopTickets);
 
 router
   .route('/topartists')
-  .get(artistController.gettopArtists)
+  .get(artistController.gettopArtists);
 
 router
   .route('/sendEmail')
-  .post(emailController.sendContactEmail)
+  .post(emailController.sendContactEmail);
 // router
 //   .route('/topticketsbydate')
 //   .get(ticketController.getClosestTickets)
