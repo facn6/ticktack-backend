@@ -8,6 +8,6 @@ client.query(sql, (err, result) => {
   if (err) console.error(err);
 });
 
-const runDbBuild = cb => client.query(sql, cb)
+const runDbBuild = (cb) => client.query(sql, cb);
 
-module.exports = runDbBuild
+module.exports = runDbBuild;
