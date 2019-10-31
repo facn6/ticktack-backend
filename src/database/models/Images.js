@@ -16,7 +16,7 @@ const getImages = () => new Promise(
 
 const postImages = (url, artist, ticket) => 
   dbConnection.query(
-    `INSERT INTO images(image_url, artist_id) VALUES($1, $2)`, [url, artist]
+    `INSERT INTO images(image_url, artist_name, event_name) VALUES($1, $2, $3)`, [url, artist, ticket]
   );
 
 module.exports = {
